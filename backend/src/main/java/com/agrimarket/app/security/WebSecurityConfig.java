@@ -60,9 +60,9 @@ public class WebSecurityConfig {
             .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> 
-                auth.requestMatchers("/api/auth/**").permitAll()
-                    .requestMatchers("/api/products/**").permitAll()
-                    .requestMatchers("/api/categories/**").permitAll()
+                auth.requestMatchers("/auth/**").permitAll()
+                    .requestMatchers("/products/**").permitAll()
+                    .requestMatchers("/categories/**").permitAll()
                     .anyRequest().authenticated()
             );
 
