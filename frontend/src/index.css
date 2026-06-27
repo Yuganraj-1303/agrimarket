@@ -1,0 +1,262 @@
+/* Import Outfit font from Google Fonts for a modern, organic, premium aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap');
+
+:root {
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  --primary-green: #1b4332;
+  --medium-green: #2d6a4f;
+  --sage-green: #52b788;
+  --light-green: #d8f3dc;
+  --gold: #e0a96d;
+  --gold-dark: #c18c5d;
+}
+
+body {
+  background-color: #f7faf8 !important;
+  color: #212529;
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+}
+
+/* Custom Natural Green Colors */
+.bg-success-dark {
+  background-color: var(--primary-green) !important;
+}
+
+.text-success-dark {
+  color: var(--primary-green) !important;
+}
+
+.text-warning-gold {
+  color: var(--gold) !important;
+}
+
+.bg-success-light {
+  background-color: var(--light-green) !important;
+}
+
+.border-success-light {
+  border-color: rgba(82, 183, 136, 0.3) !important;
+}
+
+.bg-light-green-subtle {
+  background-color: #fafdfb;
+}
+
+/* Button Custom Styles */
+.btn-success {
+  background-color: var(--medium-green) !important;
+  border-color: var(--medium-green) !important;
+}
+
+.btn-success:hover {
+  background-color: var(--primary-green) !important;
+  border-color: var(--primary-green) !important;
+}
+
+.btn-warning {
+  background-color: var(--gold) !important;
+  border-color: var(--gold) !important;
+  color: #212529 !important;
+}
+
+.btn-warning:hover {
+  background-color: var(--gold-dark) !important;
+  border-color: var(--gold-dark) !important;
+}
+
+/* Glassmorphism Alerts */
+.bg-warning-glass {
+  background: rgba(254, 243, 199, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 158, 11, 0.2) !important;
+}
+
+/* Slide-in Cart Drawer */
+.transition-fade {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.transition-slide {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(0);
+}
+
+.drawer-width {
+  animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Product Cards Scale Animations */
+.product-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(27, 67, 50, 0.12) !important;
+}
+
+.hover-scale-110 {
+  transition: transform 0.5s ease;
+}
+
+.hover-scale-110:hover {
+  transform: scale(1.1);
+}
+
+.hover-scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover-scale-103:hover {
+  transform: scale(1.03);
+}
+
+.hover-scale-102:hover {
+  transform: scale(1.02);
+}
+
+.hover-translate-y {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-translate-y:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important;
+}
+
+/* Category Cards styling */
+.category-card {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.category-card img {
+  transition: transform 0.6s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.08);
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(to top, rgba(10, 25, 18, 0.95) 0%, rgba(10, 25, 18, 0.3) 60%, rgba(0,0,0,0) 100%) !important;
+}
+
+/* Micro-animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-bounce {
+  display: inline-block;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scale {
+  animation: scaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Text Truncation Utility rules */
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-truncate-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Custom Utilities styles */
+.max-w-500 {
+  max-width: 500px;
+}
+
+.max-w-600 {
+  max-width: 600px;
+}
+
+.max-w-700 {
+  max-width: 700px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.sticky-top-aside {
+  position: sticky;
+  top: 100px;
+  z-index: 10;
+}
+
+.focus-none:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sage-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--medium-green);
+}
