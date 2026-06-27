@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://agrimarket-wgry.onrender.com")
 @RequestMapping("/api/auth")
 public class AuthController {
     @Autowired
