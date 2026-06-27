@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/auth")
 public class AuthController {
     @Autowired
     AuthenticationManager authenticationManager;
