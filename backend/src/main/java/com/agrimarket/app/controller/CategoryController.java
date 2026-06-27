@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 @RestController
-@CrossOrigin(origins = "https://agrimarket-wgry.onrender.com")
 @RequestMapping("/api/categories")
 public class CategoryController {
     @Autowired

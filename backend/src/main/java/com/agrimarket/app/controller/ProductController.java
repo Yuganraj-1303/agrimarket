@@ -11,7 +11,6 @@ import java.util.List;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
-@CrossOrigin(origins = "https://agrimarket-wgry.onrender.com")
 @RequestMapping("/api/products")
 public class ProductController {
     @Autowired
