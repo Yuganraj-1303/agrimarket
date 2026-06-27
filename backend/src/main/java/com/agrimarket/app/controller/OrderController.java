@@ -11,8 +11,11 @@ import org.springframework.web.bind.annotation.*;
 import java.security.Principal;
 import java.util.List;
 import java.util.Map;
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/orders")
 public class OrderController {
     @Autowired
